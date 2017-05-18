@@ -1,0 +1,96 @@
+html,body {
+  font-family: sans-serif;
+  background: #466368;
+  background: linear-gradient(to bottom, #f6f1d3, #648880, #293f50);
+  height: 100%;
+}
+* {
+    box-sizing: content-box;
+}
+#APPX {
+      margin: auto;
+      padding: 15px;
+      border: 3px solid white;
+      background: #ffffe6;
+      width: 1000px;
+      height: 680px;
+      border-radius: 10px;
+}
+.editor {
+ margin: 5px;
+ padding: 5px;
+ width: 65%;
+ height: 90%;
+ float: right;
+ border: 3px solid black;
+ border-radius: 5px;
+ overflow:auto;
+}
+#TOP {
+  margin: auto;
+  padding: 3px;
+  height: 40px;
+  float: top;
+}
+
+#WYNIK {
+  margin: 5px;
+  padding: 5px;
+  width: 27%;
+	height: 90%;
+  border: 3px solid black;
+  border-radius: 5px;
+  float: left;
+  overflow-y: scroll;
+  box-sizing: content-box;
+}
+
+#synonim_menu {
+
+ padding: 3px;
+ width: auto;
+ height: 240px;
+ border: 3px solid black;
+ border-radius: 5px;
+ text-align: center;
+ box-sizing: content-box;
+}
+
+#statystyki_tekstu {
+ margin: 3px;
+ padding: 3px;
+ width: auto;
+height: 240px;
+ border: 3px solid black;
+ border-radius: 5px;
+ text-align: center;
+}
+
+#definicja {
+  margin: 3px;
+  padding: 3px;
+ width: auto;
+height: 240px;
+ border: 3px solid black;
+ border-radius: 5px;
+text-align: center;
+}
+
+#ontologie {
+ margin: 3px;
+ padding: 3px;
+ width: auto;
+height: 240px;
+ border: 3px solid black;
+ border-radius: 5px;
+text-align: center;
+ overflow:auto;
+ box-sizing: content-box;
+}
+
+ul {
+    width: 200px; /* Set a width if you like */
+    position: fixed;
+    overflow-y: auto;
+    height: 200px;
+}
