@@ -1,6 +1,6 @@
 {
-  "name": "zpiedytor2",
-  "version": "0.1.0",
+  "name": "TextEditor",
+  "version": "0.1.3",
   "private": true,
   "dependencies": {
     "draft-js": "^0.10.0",
