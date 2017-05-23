@@ -1,0 +1,7 @@
+const s = window.getSelection();
+      s.modify('extend','backward','word');
+      var b = s.toString();
+      s.modify('extend','forward','word');
+      const a = s.toString();
+        s.modify('move','forward','character');
+      const l = s+a

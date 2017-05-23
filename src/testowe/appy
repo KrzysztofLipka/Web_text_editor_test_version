@@ -1,7 +1,4 @@
-import React, { Component }  from 'react';
-
-import { ContextMenu, MenuItem, ContextMenuTrigger } from "react-contextmenu";
-
+import React from 'react';
 var ReactDOM = require('react-dom');
 import {Editor, EditorState,RichUtils, convertToRaw,getDefaultKeyBinding, KeyBindingUtil} from 'draft-js';
 const {hasCommandModifier} = KeyBindingUtil;

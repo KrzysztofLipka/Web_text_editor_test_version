@@ -1,36 +1,43 @@
-html,body {
+html,body
+{
   font-family: sans-serif;
   background: #466368;
-  background: linear-gradient(to bottom, #f6f1d3, #648880, #293f50);
+  background: linear-gradient(to bottom, #d7e4f0, #7fa0bf, #4b759b);
   height: 100%;
 }
 * {
     box-sizing: content-box;
 }
-#content{
+#content
+{
       margin: auto;
-      padding: 15px;
-      border: 3px solid white;
-      background: #ffffe6;
+      padding: 5px;
+      background: #d7e4f0;
       width: 1300px;
       height: 650px;
-      border-radius: 10px;
+      border-style: solid #d7e4f0;
+      border-radius: 5px;
 }
 .editor {
  margin: 5px;
  padding: 5px;
- width: 65%;
+ width: 69%;
  height: 90%;
  float: right;
- border: 3px solid black;
- border-radius: 5px;
  overflow:auto;
+ background: white;
 }
 #menu {
   margin: auto;
   padding: 3px;
   height: 40px;
   float: top;
+
+}
+#odstep{
+    width:5px;
+    height:auto;
+    display:inline-block;
 }
 
 #wynik {
@@ -38,84 +45,83 @@ html,body {
   padding: 5px;
   width: 27%;
 	height: 90%;
-  border: 3px solid black;
-  border-radius: 5px;
   float: left;
   overflow-y: scroll;
   box-sizing: content-box;
+  border-radius: 5px;
+  background: #7fa0bf;
 }
 
 #synonim_menu {
-
- padding: 3px;
+ margin: 5px;
+ padding: 5px;
  width: auto;
- height: 240px;
- border: 3px solid black;
- border-radius: 5px;
+ height: 40%;
  text-align: center;
  box-sizing: content-box;
+ background: #ffffff;
+ overflow-y: scroll;
 }
 
 #word_countUI
 {
- margin: 3px;
- padding: 3px;
+ margin: 5px;
+ padding: 5px;
  width: auto;
-height: 240px;
- border: 3px solid black;
- border-radius: 5px;
+ height: 40%;
  text-align: center;
+ background: #ffffff;
+ overflow-y: scroll;
 }
 
 #speech_partsUI
 {
- margin: 3px;
- padding: 3px;
+ margin: 5px;
+ padding: 5px;
  width: auto;
-height: 240px;
- border: 3px solid black;
- border-radius: 5px;
+ height: 40%;
  text-align: center;
+ background: #ffffff;
+ overflow-y: scroll;
 }
-
 #definicja {
-  margin: 3px;
-  padding: 3px;
+ margin: 5px;
+ padding: 5px;
  width: auto;
-height: 240px;
- border: 3px solid black;
- border-radius: 5px;
-text-align: center;
+ height: 40%;
+ text-align: center;
+ background: #ffffff;
+ overflow-y: scroll;
 }
 
 #ontologie
 {
- margin: 3px;
- padding: 3px;
+ margin: 5px;
+ padding: 5px;
  width: auto;
-height: 240px;
- border: 3px solid black;
- border-radius: 5px;
-text-align: center;
+ height: 40%;
+ text-align: center;
  overflow:auto;
  box-sizing: content-box;
+ background: #ffffff;
+ overflow-y: scroll;
 }
-
-ul {
-    width: 200px; /* Set a width if you like */
-    position: fixed;
-    overflow-y: auto;
-    height: 200px;
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
-
- a {
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+a
+{
     background-color: #eee; /* Grey background color */
     color: black; /* Black text color */
     display: block; /* Make the links appear below each other */
     padding: 12px; /* Add some padding */
     text-decoration: none; /* Remove underline from links */
 }
-
  a:hover {
     background-color: #ccc; /* Dark grey background on mouse-over */
 }
