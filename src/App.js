@@ -47,7 +47,22 @@ export default class App extends React.Component {
     }
   })
   .then(function (response) {
-    console.log(response);
+  
+    var speech_partsARRAY = response.data.speech_parts;
+    var speech_partsLIST = speech_partsARRAY.map(function(person)
+  {return <li><a href = '#'>{person}</a></li>;});
+  ReactDOM.render(<ul>{speech_partsLIST}</ul>,document.getElementById('speech_partsUI'))
+
+
+  var synonyms = response.data.synonims;
+	var synolist = synonyms.map(function(person){
+	return <li><a href = '#'>{person}</a></li>;
+});
+ReactDOM.render(<ul>{synolist}</ul>,document.getElementById('synonim_menu'))
+
+
+
+
   })
   .catch(function (error) {
     console.log(error);
@@ -58,6 +73,53 @@ export default class App extends React.Component {
 
 
   }
+
+/*-------------------------------------------------------------------------------*/
+
+handlePastedText = (event) => {
+  const {editorState} = this.state;
+  var req = JSON.stringify(convertToRaw(editorState.getCurrentContent()))
+
+
+  axios.get('/send_editor_state?editor_state='+req)
+  .then(function (response) {
+  console.log(response);
+  console.log(response.data);
+  var word_countARRAY = response.data.word_count;
+  var word_countLIST = word_countARRAY.map(function(person)
+  {return <li><a href = '#'>{person}</a></li>;});
+  ReactDOM.render(<ul>{word_countLIST}</ul>,document.getElementById('word_countUI'))
+
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+
+  }
+
+  /*----zadanie wyslania po zmianie w tekscie---*/
+  handleBeforeInput = (event) => {
+    const {editorState} = this.state;
+    var req = JSON.stringify(convertToRaw(editorState.getCurrentContent()))
+
+    axios.get('/send_editor_state?editor_state='+req)
+    .then(function (response) {
+    console.log(response);
+    console.log(response.data);
+    var word_countARRAY = response.data.word_count;
+    var word_countLIST = word_countARRAY.map(function(person)
+    {return <li><a href = '#'>{person}</a></li>;});
+    ReactDOM.render(<ul>{word_countLIST}</ul>,document.getElementById('word_countUI'))
+
+
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+
+  }
+
 
   /*------------------------------------------------------------------------------------------*/
 
@@ -241,6 +303,8 @@ ReactDOM.render(<ul>{synolist}</ul>,document.getElementById('synonim_menu'))
       onChange={this.onChange}
 			handleKeyCommand={this.handleKeyCommand}
 			keyBindingFn={this.keyBindingFn}
+      handleBeforeInput={this.handleBeforeInput}
+      handlePastedText={this.handlePastedText}
         />
         </div>
 		<div id  = 'wynik'>
